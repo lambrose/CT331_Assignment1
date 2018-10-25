@@ -20,6 +20,30 @@ void runTests(){
   deleteAfter(l);
   traverse(l);
   printf("\n");
-
+    
+  printf("String length: %d\n", length(l));     //printing out list size
+  printf("\nTests push and pop method.\n");    
+  push(&l, "Push string1", 30); //checking push method
+  push(&l, "Push string2", 30);    
+  traverse(l); //printing ut elements
+  printf("\n");
+  printf("String length after push: %d\n", length(l));    
+  pop(&l);//checking the pop method
+  traverse(l);
+  printf("String length after pop: %d\n", length(l));
+  printf("\n");
+    
+  printf("String length: %d\n", length(l));      //printing size
+  printf("\nTests enqueue and deque method.\n");    
+  enqueue(&l, "enqueue string1", 30);
+  enqueue(&l, "enqueue string2", 30);    //checking enqueue method
+  traverse(l);
+  printf("\n");
+  printf("String length after enqueue: %d\n", length(l));    
+  dequeue(l);   //checking dequeue method
+  traverse(l);
+  printf("String length after dequeue: %d\n", length(l));
+  printf("\n");    
+    
   printf("\nTests complete.\n");
 }
